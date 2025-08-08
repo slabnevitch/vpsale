@@ -38,7 +38,7 @@
    width: 100%;
   }
   
-  @include max-screen($xsss){
+  @include max-screen($xs){
     width: 100%;
     padding-right: 30px;
     padding-left: 30px;

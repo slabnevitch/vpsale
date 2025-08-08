@@ -450,7 +450,7 @@ textarea {
 .btn-fw {
   width: 100%;
 }
-@media only screen and (max-width: 23.4375em) {
+@media only screen and (max-width: 36em) {
   .btn {
     width: 100%;
     padding-right: 30px;
