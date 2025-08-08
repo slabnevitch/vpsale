@@ -1,71 +1,3 @@
-// jQuery(function() {
-
-// 	// ibg class
-// 		if('objectFit' in document.documentElement.style === false){
-// 		  Array.prototype.forEach.call(document.querySelectorAll('._fit'), function(el){
-
-// 		    var image = el.querySelector('img');
-// 		    el.style.backgroundImage = 'url("'+image.src+'")';
-// 		    el.classList.add('ibg');
-// 		    el.classList.remove('_fit');
-//  		 });
-// 		}
-// 	// End ibg class
-
-// $(document).on('click', function(e) {
-	// var $target = $(e.target);
-// });// $(document).on('click')
-
-	// jQuery(document).ready(function() {
-	// 	console.log('jQuery document ready');
-	// });
-
-// 	//SVG Fallback
-// 	// if(!Modernizr.svg) {
-// 	// 	$("img[src*='svg']").attr("src", function() {
-// 	// 		return $(this).attr("src").replace(".svg", ".png");
-// 	// 	});
-// 	// };
-
-// 	//E-mail Ajax Send
-// 	//Documentation & Example: https://github.com/agragregra/uniMail
-// 	$("form").submit(function() { //Change
-// 		var th = $(this);
-// 		$.ajax({
-// 			type: "POST",
-// 			url: "mail.php", //Change
-// 			data: th.serialize()
-// 		}).done(function() {
-// 			alert("Thank you!");
-// 			setTimeout(function() {
-// 				// Done Functions
-// 				th.trigger("reset");
-// 			}, 1000);
-// 		});
-// 		return false;
-// 	});
-
-// 	//Chrome Smooth Scroll
-// 	try {
-// 		$.browserSelector();
-// 		if($("html").hasClass("chrome")) {
-// 			$.smoothScroll();
-// 		}
-// 	} catch(err) {
-
-// 	};
-
-// 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
-	
-// });
-
-// $(window).on('load', function() {
-
-// 	$(".loader_inner").fadeOut();
-// 	$(".loader").delay(400).fadeOut("slow");
-
-// });
-
 (function() {
 	// ibg class
 	// if('objectFit' in document.documentElement.style === false){
@@ -80,7 +12,44 @@
 	// End ibg class
 
 	document.addEventListener('DOMContentLoaded', function() {
-		console.log('DOMContentLoaded!');
+		// inputs jump
+		if(document.querySelector(".form-order__code") !== null){
+			var pinContainer = document.querySelector(".form-order__code"); //в этот блок надо положить все необходимые инпуты
+
+			pinContainer.addEventListener('keyup', function (event) {
+			    var target = event.srcElement;
+			    
+			    var maxLength = parseInt(target.attributes["maxlength"].value, 10);
+			    var myLength = target.value.length;
+
+			    if (myLength >= maxLength) {
+			        var next = target;
+			        while (next = next.nextElementSibling) {
+			            if (next == null) break;
+			            if (next.tagName.toLowerCase() == "input") {
+			                next.focus();
+			                break;
+			            }
+			        }
+			    }
+
+			    if (myLength === 0) {
+			        var next = target;
+			        while (next = next.previousElementSibling) {
+			            if (next == null) break;
+			            if (next.tagName.toLowerCase() == "input") {
+			                next.focus();
+			                break;
+			            }
+			        }
+			    }
+			}, false);
+
+			pinContainer.addEventListener('keydown', function (event) {
+			    var target = event.srcElement;
+			    target.value = "";
+			}, false);
+		}
 		
-		});
+	});
 })();

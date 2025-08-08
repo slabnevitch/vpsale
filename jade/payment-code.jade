@@ -5,43 +5,17 @@ block title
 	| Платежная страница - код
 
 block content
-	.payment-page
-		.payment
-			.payment__column
-				.payment__container
-					.payment__content
-						a(href="#").payment__logo
-							img(src="img/payment-page/logo-black.svg" alt="alt")
-						
-						.payment__header
-							.payment__title Оплата заказа
-							.payment__subtitle Введите код
-						
-						form(action="#").order__form.order__form--payment.form-order
-							.form-order__code
-								- for (var i=0; i < 4; i++)
-									input(autocomplete="off" type="number" name="" class="form-order__input form-order__input--code" placeholder="0" maxlength="1" data-max-n="2")
+	.payment__header
+		.payment__title Оплата заказа
+		.payment__subtitle Введите код
+	
+	form(action="#").order__form.form-order
+		.form-order__code
+			- for (var i=0; i < 4; i++)
+				input(autocomplete="off" type="number" name="" class="form__input form__input--code" placeholder="0" maxlength="1" data-max-n="2")
 
-							.form-order__bottom
-								button.btn.form-order__send(type="submit") Оплатить
-						
-			.payment__column
-				.payment__info.info-payment
-					.info-payment__title Pay4game
-					.payment__title 322.22 руб.
-					.info-payment__title Назначение платежа
-					.info-payment__text Оплата счета 256352073
-
-					.info-payment__help
-						.info-payment__title Нужна помощь?
-						ul.info-payment__soc-list
-							li.info-payment__soc-item
-								a(href="#").info-payment__soc-link
-									img(src="img/payment-page/logos_telegram.svg" alt="alt")
-									| Связаться
-
-					info-payment__bottom
-						.info-payment__text Совершая оплату вы соглашаетесь с #[a(href="#") договором офферты]
+		.form-order__bottom
+			button.btn(type="submit") Отправить
 
 block page-scripts
 	//- SERVIVE FUNCTIONS==================

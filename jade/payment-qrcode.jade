@@ -3,39 +3,19 @@ extends _templates/main-payment
 
 block title
 	| Платежная страница - QR-код
+	- var page = 'qr';
 
 block content
-	.payment-page
-		.payment
-			.payment__column
-				.payment__container
-					.payment__content
-						a(href="#").payment__logo
-							img(src="img/payment-page/logo-black.svg" alt="alt")
-						.payment__header
-							.payment__title Оплата заказа
-							.payment__subtitle Отсканируйте QR-код в мобильном приложении банка или штатной камерой телнфона
+	.payment__header
+		.payment__title Оплата заказа
+		.payment__subtitle Отсканируйте QR-код 
+			br
+			| в мобильном приложении банка 
+			br
+			| или штатной камерой телефона
 						
-						.payment__qrcode
-							img(src="img/payment-page/qr.jpg" alt="alt")
-						
-			.payment__column
-				.payment__info.info-payment
-					.info-payment__title Pay4game
-					.payment__title 322.22 руб.
-					.info-payment__title Назначение платежа
-					.info-payment__text Оплата счета 256352073
-
-					.info-payment__help
-						.info-payment__title Нужна помощь?
-						ul.info-payment__soc-list
-							li.info-payment__soc-item
-								a(href="#").info-payment__soc-link
-									img(src="img/payment-page/logos_telegram.svg" alt="alt")
-									| Связаться
-
-					.info-payment__bottom
-						.info-payment__text Совершая оплату вы соглашаетесь с #[a(href="#") договором офферты]
+		.payment__qrcode
+			img(src="img/qr.jpg" alt="alt")
 
 block page-scripts
 	//- SERVIVE FUNCTIONS==================

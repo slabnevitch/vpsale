@@ -39,7 +39,7 @@ html(lang='ru')
 		//- при использовании _body-html-for-slideout или _footer-to-bottom  -- закомментировать:
 		//- include ../_sections/header
 		.payment-page
-			.payment
+			div(class=page == 'qr'?"payment payment--qr":"payment")
 				.payment__column
 					.payment__container
 						.payment__content

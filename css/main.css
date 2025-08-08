@@ -241,6 +241,25 @@ textarea {
   color: #97919A;
   opacity: 1;
 }
+.form__input--code {
+  -ms-flex: 0 0 5.34375rem;
+  flex: 0 0 5.34375rem;
+  -moz-appearance: textfield;
+  text-align: center;
+}
+@media only screen and (max-width: 36em) {
+  .form__input--code {
+    -ms-flex-preferred-size: 3.9375rem;
+    flex-basis: 3.9375rem;
+  }
+}
+@media only screen and (max-width: 22.5em) {
+  .form__input--code {
+    -ms-flex: 0 1 25%;
+    flex: 0 1 25%;
+    padding-inline: 5px;
+  }
+}
 
 .form__placeholder {
   position: absolute;
@@ -481,6 +500,11 @@ textarea {
   border-radius: 32px;
   background-color: #231628;
 }
+@media only screen and (max-width: 58em) {
+  .payment {
+    margin-inline: 14px;
+  }
+}
 @media only screen and (max-width: 47.99875em) {
   .payment {
     max-width: 33.5rem;
@@ -498,14 +522,27 @@ textarea {
 }
 @media only screen and (max-width: 23.4375em) {
   .payment {
-    margin-inline: 14px;
     margin-top: none;
+  }
+}
+@media only screen and (min-width: 47.99875em) {
+  .payment--qr {
+    padding-top: 75px;
+    padding-bottom: 62px;
   }
 }
 
 .payment__column {
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
+}
+.payment__column--flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .payment__logotype {
@@ -537,7 +574,7 @@ textarea {
   right: 0;
   top: -20px;
   width: 0.0625rem;
-  height: calc(100% - 44px);
+  height: 440px;
   background: rgba(255, 255, 255, 0.1);
 }
 @media only screen and (max-width: 47.99875em) {
@@ -559,6 +596,11 @@ textarea {
 @media only screen and (min-width: 47.99875em) {
   .payment__container {
     padding-right: 1.3125rem;
+  }
+}
+@media only screen and (max-width: 47.99875em) {
+  .payment--qr .payment__container {
+    padding-bottom: 18px;
   }
 }
 
@@ -640,6 +682,11 @@ textarea {
   -webkit-appearance: none;
   margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
+@media only screen and (max-width: 20em) {
+  .form-order__code {
+    column-gap: 8px;
+  }
+}
 
 .form-order__input--align-left {
   text-align: left;
@@ -688,9 +735,6 @@ textarea {
   flex-shrink: 0;
 }
 
-.payment__info {
-  padding-top: 125px;
-}
 @media only screen and (max-width: 47.99875em) {
   .payment__info {
     padding-top: 2.0625rem;

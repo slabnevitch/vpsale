@@ -27,6 +27,11 @@
 	border-radius: 32px;
 	background-color: $bgfield;
 
+	@include max-screen(em(928px)){
+		margin-inline: 14px;
+		
+	}
+
 	@include max-screen($sm){
 		max-width: rem(536);
 		flex-direction: column;
@@ -38,12 +43,24 @@
 		padding-right: 18px;
 	}
 	@include max-screen($xsss){
-		margin-inline: 14px;
 		margin-top: none;
+	}
+
+	&--qr{
+		@include min-screen($sm){
+			padding-top: 75px;
+			padding-bottom: 62px;
+		}
 	}
 }
 .payment__column{
 	flex: 0 0 50%;
+
+	&--flex{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 }
 .payment__logotype{
 	margin-bottom: 40px;
@@ -71,7 +88,7 @@
 		right: 0;
 		top: -20px;
 		width: rem(1);
-		height: calc(100% - 44px);
+		height: 440px;
 		background: rgba(#fff, .1);
 
 		@include max-screen($sm){
@@ -88,6 +105,12 @@
 	@include min-screen($sm){
 		padding-right: rem(21);
 		
+	}
+
+	.payment--qr &{
+		@include max-screen($sm){
+			padding-bottom: 18px;
+		}
 	}
 }
 // .payment__top {
@@ -161,7 +184,11 @@
 		    /* display: none; <- Crashes Chrome on hover */
 		    -webkit-appearance: none;
 		    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+		
 		}
+	    @include max-screen($mins){
+	    	column-gap: 8px;
+	    }
 	}
 }
 .form-order__input {
@@ -202,7 +229,7 @@
 	}
 }
 .payment__info {
-	padding-top: 125px;
+	// padding-top: 125px;
 
 	@include max-screen($sm){
 		padding-top: rem(33);

@@ -26,6 +26,20 @@
 	color: #fff;
 	font-family: $med;
 	font-size: 16px;
+
+	&--code{
+		flex: 0 0 rem(85.5);
+		-moz-appearance: textfield;
+		text-align: center;
+
+		@include max-screen($xs){
+			flex-basis: rem(63);
+		}
+		@include max-screen($min){
+			flex: 0 1 25%;
+			padding-inline: 5px;
+		}
+	}
 }
 .form__placeholder{
 	position: absolute;
