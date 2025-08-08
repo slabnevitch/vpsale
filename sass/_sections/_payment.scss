@@ -30,17 +30,22 @@
 	@include max-screen($sm){
 		max-width: rem(536);
 		flex-direction: column;
-		padding: rem(48);
+		padding: 51px 48px 48px 48px;
 	}
 	@include max-screen($xs){
-		max-width: rem(332);
-		padding: rem(65) rem(16);
+		max-width: 332px;
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+	@include max-screen($xsss){
+		margin-inline: 14px;
+		margin-top: none;
 	}
 }
 .payment__column{
 	flex: 0 0 50%;
 }
-.payment__logo{
+.payment__logotype{
 	margin-bottom: 40px;
 	display: inline-block;
 	text-align: center;
@@ -48,6 +53,10 @@
 	font-size: 20px;
 	line-height: math.div(16,20);
 	text-decoration: none;
+
+	@include max-screen($sm){
+		margin-bottom: 32px;
+	}
 }	
 .payment__container {
 	display: flex;
@@ -70,11 +79,15 @@
 		}
 	}
 	@include max-screen($sm){
-		padding-bottom: 48px;
-		border-bottom: 1px solid rgba($accent, .2);
+		padding-bottom: 39px;
+		border-bottom: 1px solid #392D3E;
+	}
+	@include max-screen($xs){
+		padding-bottom: 33px;
 	}
 	@include min-screen($sm){
 		padding-right: rem(21);
+		
 	}
 }
 // .payment__top {
@@ -180,7 +193,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-wrap: wrap;
 	column-gap: rem(16);
 
 	img{
@@ -193,10 +205,10 @@
 	padding-top: 125px;
 
 	@include max-screen($sm){
-		padding-top: rem(38);
+		padding-top: rem(33);
 	}
 	@include max-screen($xs){
-		padding-top: rem(34);
+		padding-inline: 21px;
 	}
 
 	@include min-screen($sm){
