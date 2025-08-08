@@ -1,0 +1,273 @@
+/*--------------------payment----------------------*/
+.payment-page{
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+
+	@include max-screen($sm){
+		padding-block: rem(83);
+	}
+	@include max-screen($xss){
+		padding-block: rem(97);
+	}
+}
+.payment{
+	position: relative;
+	z-index: 2;
+	width: 100%; 
+	max-width: 900px;
+	min-height: 541px;
+	padding-block: 86px;
+	padding-inline: 39px;
+	margin-inline: auto;
+	display: flex;
+	border-radius: 32px;
+	background-color: $bgfield;
+
+	@include max-screen($sm){
+		max-width: rem(536);
+		flex-direction: column;
+		padding: rem(48);
+	}
+	@include max-screen($xs){
+		max-width: rem(332);
+		padding: rem(65) rem(16);
+	}
+}
+.payment__column{
+	flex: 0 0 50%;
+}
+.payment__logo{
+	margin-bottom: 40px;
+	display: inline-block;
+	text-align: center;
+	font-family: $Bbold;
+	font-size: 20px;
+	line-height: math.div(16,20);
+	text-decoration: none;
+}	
+.payment__container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	
+	position: relative;
+
+	&:after{
+		content: '';
+		position: absolute;
+		right: 0;
+		top: -20px;
+		width: rem(1);
+		height: calc(100% - 44px);
+		background: rgba(#fff, .1);
+
+		@include max-screen($sm){
+			display: none;
+		}
+	}
+	@include max-screen($sm){
+		padding-bottom: 48px;
+		border-bottom: 1px solid rgba($accent, .2);
+	}
+	@include min-screen($sm){
+		padding-right: rem(21);
+	}
+}
+// .payment__top {
+// 	margin-bottom: rem(24);
+// 	flex: 0 0 auto;
+// 	text-align: center;
+
+// 	&--mb0{
+// 		margin-bottom: 0;
+
+// 		@include max-screen($sm){
+// 			margin-bottom: rem(24);
+// 		}
+// 	}
+// }
+.payment__content {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+.payment__header{
+	text-align: center;
+}
+.payment__title {
+	margin-bottom: 16px;
+	font-size: 32px;
+	font-family: $bold;
+}
+.payment__subtitle {
+	margin-bottom: 16px;
+	font-size: 16px;
+}
+.order__form {
+	&--payment{
+		@include max-screen($sm){
+			max-width: rem(390);
+			margin-inline: auto;
+		}
+		.form-order__input{
+			padding-inline: rem(12);
+			margin-bottom: rem(16);
+			background-color: #fff;
+			@include placecolor(#808080);
+			color: #808080;
+			text-align: left;
+
+			&--code{
+				text-align: center;
+			}
+
+			&--mb24{
+				margin-bottom: rem(24);
+			}
+		}
+	}
+}
+.form-order {
+	&__text{
+		margin-bottom: rem(16);
+		text-align: center;
+	}
+	&__code{
+		margin-bottom: rem(8);
+		display: flex;
+		column-gap: rem(16);
+
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+		    /* display: none; <- Crashes Chrome on hover */
+		    -webkit-appearance: none;
+		    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+		}
+	}
+}
+.form-order__input {
+	&--align-left{
+		text-align: left;
+	}
+	&--code{
+		flex: 0 0 rem(85.5);
+		-moz-appearance: textfield;
+
+		@include max-screen($xs){
+			flex-basis: rem(63);
+		}
+	}
+}
+.form-order__cols {
+	display: flex;
+	column-gap: rem(18);
+}
+.form-order__col {
+	flex: 0 0 calc(50% - rem(9));
+}
+.form-order__text {}
+.form-order__bottom {
+	text-align: center;
+}
+.payment__logos {
+	margin-top: rem(24);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	column-gap: rem(16);
+
+	img{
+		display: block;
+		max-height: rem(23);
+		flex-shrink: 0;
+	}
+}
+.payment__info {
+	padding-top: 125px;
+
+	@include max-screen($sm){
+		padding-top: rem(38);
+	}
+	@include max-screen($xs){
+		padding-top: rem(34);
+	}
+
+	@include min-screen($sm){
+		padding-left: rem(32);
+	}
+
+	.payment__title{
+		line-height: 1;
+		margin-bottom: rem(29);
+	}
+}
+.info-payment {}
+.info-payment__title {
+	margin-bottom: 1rem;
+	font-family: $Bmed;
+}
+.info-payment__target{
+	margin-bottom: 8px;
+	font-family: $med;
+}
+.info-payment__help {
+	margin-top: rem(34);
+
+	@include max-screen($sm){
+		margin-top: rem(37);
+	}
+	@include max-screen($xs){
+		margin-top: rem(34);
+	}
+}
+.info-payment__soc-list {
+	display: flex;
+	align-items: center;
+	gap: rem(8);
+	margin-bottom: rem(28);
+}
+.info-payment__soc-item {
+	list-style-type: none;
+}
+.info-payment__soc-link {
+	padding-left: rem(8px);
+	padding-right: rem(14px);
+	display: inline-flex;
+	align-items: center;
+	column-gap: rem(10);
+	height: rem(34);
+	border-radius: rem(100px);
+	font-size: rem(14px);
+	font-family: $med;
+	color: #fff;
+	background: #2AABEE;
+	text-decoration: none;
+}
+.info-payment__bottom {
+	margin-top: 23px;
+	@include min-screen($sm){
+		max-width: 281px;	
+	}
+
+	a{
+		color: $accent;
+		text-decoration: none;
+	}
+}
+.payment__qrcode{
+	margin-top: rem(28px);
+	max-width: rem(200);
+	margin-inline: auto;
+	img{
+		display: block;
+
+	}
+}
+/*--------------------END payment----------------------*/ 

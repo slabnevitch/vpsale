@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Платежная страница - код</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" sizes="16x16">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="favic.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!-- - этот миксин включать только если требуют SEO-->
+    <div class="payment-page">
+      <div class="payment">
+        <div class="payment__column">
+          <div class="payment__container">
+            <div class="payment__content"><a href="#" class="payment__logo">VPSale</a>
+              <div class="payment-page">
+                <div class="payment">
+                  <div class="payment__column">
+                    <div class="payment__container">
+                      <div class="payment__content"><a href="#" class="payment__logo"><img src="img/payment-page/logo-black.svg" alt="alt"></a>
+                        <div class="payment__header">
+                          <div class="payment__title">Оплата заказа</div>
+                          <div class="payment__subtitle">Введите код</div>
+                        </div>
+                        <form action="#" class="order__form order__form--payment form-order">
+                          <div class="form-order__code">
+                            <input autocomplete="off" type="number" name="" placeholder="0" maxlength="1" data-max-n="2" class="form-order__input form-order__input--code">
+                            <input autocomplete="off" type="number" name="" placeholder="0" maxlength="1" data-max-n="2" class="form-order__input form-order__input--code">
+                            <input autocomplete="off" type="number" name="" placeholder="0" maxlength="1" data-max-n="2" class="form-order__input form-order__input--code">
+                            <input autocomplete="off" type="number" name="" placeholder="0" maxlength="1" data-max-n="2" class="form-order__input form-order__input--code">
+                          </div>
+                          <div class="form-order__bottom">
+                            <button type="submit" class="btn form-order__send">Оплатить</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="payment__column">
+                    <div class="payment__info info-payment">
+                      <div class="info-payment__title">Pay4game</div>
+                      <div class="payment__title">322.22 руб.</div>
+                      <div class="info-payment__title">Назначение платежа</div>
+                      <div class="info-payment__text">Оплата счета 256352073</div>
+                      <div class="info-payment__help">
+                        <div class="info-payment__title">Нужна помощь?</div>
+                        <ul class="info-payment__soc-list">
+                          <li class="info-payment__soc-item"><a href="#" class="info-payment__soc-link"><img src="img/payment-page/logos_telegram.svg" alt="alt">Связаться</a></li>
+                        </ul>
+                      </div>
+                      <info-payment__bottom>
+                        <div class="info-payment__text">Совершая оплату вы соглашаетесь с <a href="#">договором офферты</a></div>
+                      </info-payment__bottom>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="payment__column">
+          <div class="payment__info info-payment">
+            <div class="info-payment__title">VPSale</div>
+            <div class="payment__title">322.22 руб.</div>
+            <div class="info-payment__target">Назначение платежа</div>
+            <div class="info-payment__text">Оплата счета 256352073</div>
+            <div class="info-payment__bottom">
+              <div class="info-payment__text">Совершая оплату <br>вы соглашаетесь <br>с <a href="#">договором офферты</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/common.js"></script>
+  </body>
+</html>
